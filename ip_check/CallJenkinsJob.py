@@ -23,4 +23,4 @@ job_trigger_response = requests.post(
     + config('IP_JOB_TOKEN')
     + """&ip_address='127.0.0.1'""",
     headers=response,
-    auth=('jgruenbaum', config("JENKINS_TOKEN")))
+    auth=(config("USERNAME"), config("JENKINS_TOKEN")))
