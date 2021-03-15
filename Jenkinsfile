@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'python:3.9-slim' } }
+    agent { docker { image 'python' } }
     stages {
         stage('build') {
             steps {
