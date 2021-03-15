@@ -14,8 +14,8 @@ response = requests.get(
 response = json.loads(response.text)
 
 """
-Posts to the job url, passing an ip_address as
-a parameter.
+Posts request to the job url, passing ip_address
+as a parameter.
 """
 job_trigger_response = requests.post(
     config('JENKINS_URL')
