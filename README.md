@@ -1,2 +1,8 @@
 # IP-Check
-Script to call the Jenkin's job that accepts an IP address parameter. The job will block the address for an hour if its malicious.
+Repo contains
+
+1. Script to call Jenkins Job and passes IP as a parameter.
+
+2. A script that utilizes the firepower API.
+
+3. A script that utilizes paramiko to ssh into Juniper routers.
