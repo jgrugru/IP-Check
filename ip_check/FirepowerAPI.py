@@ -1,8 +1,8 @@
 from fireREST import FMC
-from decouple import config
+from decouple import AutoConfig
 
 ENV_DIR_PATH = "/home/jgruenbaum/Desktop/programming_projects/IP-Check/env"
-config = AutoConfig(ENV_DIR_PATH)
+config = AutoConfig(search_path=ENV_DIR_PATH)
 
 fmc = FMC(
     hostname=config("FIREPOWER_HOSTNAME"),
