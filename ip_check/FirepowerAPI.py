@@ -9,5 +9,5 @@ fmc = FMC(
     username=config("FIREPOWER_USERNAME"),
     password=config("FIREPOWER_PASSWORD"),
     domain='Global')
-    
+
 print(fmc.object.network.get())
