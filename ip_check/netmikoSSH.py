@@ -30,10 +30,11 @@ output += net_connect.send_command('show system users')
 output += net_connect.config_mode()
 print("config mode?", net_connect.check_config_mode())
 output += net_connect.send_command(
-    'set policy-options prefix-list '
-    + 'ALLOW_ICMP_FROM_SOURCES 167.224.81.15/32')
+    'delete policy-options prefix-list '
+    + 'DENY_ICMP_FROM_SOURCES 167.224.81.15/32')
 output += net_connect.send_command('show | compare')
 output += net_connect.commit(confirm_delay=1, confirm=True)
+output += net_connect.commit()
 output += net_connect.exit_config_mode()
 print("is alive? ", net_connect.is_alive())
 print(output)
